@@ -1,0 +1,70 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+	body {
+		@apply font-sans text-navy;
+		background-color: #f0f4fa;
+	}
+}
+
+@layer components {
+	.outer-page-grid {
+		@apply grid grid-cols-6 space-y-20 xl:container lg:p-0;
+	}
+
+	.inner-page-grid {
+		@apply col-span-full md:col-span-6 md:col-start-1 md:grid md:grid-cols-6 lg:col-span-4 lg:col-start-2;
+	}
+
+	.nav-link {
+		@apply text-navy hover:border-b-2 hover:border-navy;
+	}
+
+	.nav-link.active {
+		@apply border-b-2 border-navy;
+	}
+
+	.heading-style-1 {
+		@apply font-bold tracking-tight text-navy;
+		word-spacing: 0.3rem;
+		font-size: 2.6rem;
+		line-height: 1.1;
+	}
+
+	.heading-style-2 {
+		@apply font-medium tracking-tight text-navy;
+		word-spacing: 0.15rem;
+		font-size: 1.6rem;
+		line-height: 2.25rem;
+	}
+
+	.primary-button {
+		@apply rounded-md bg-turquoise px-12 py-3 text-black;
+	}
+
+	.form-group {
+		@apply flex flex-col gap-y-1;
+	}
+
+	.form-label {
+		@apply text-sm font-semibold text-navy;
+	}
+
+	.form-input {
+		@apply rounded-md border-1.5 border-navy bg-skyBlue/15 p-2 focus:border-turquoise focus:outline-none focus:ring-1 focus:ring-turquoise;
+	}
+}
+
+@layer utilities {
+	.paragraph-spacing {
+		@apply space-y-4;
+	}
+
+	.form-shadow {
+		box-shadow:
+			0 4px 18px 4px var(--tw-shadow-color),
+			0 4px 18px -4px var(--tw-shadow-color);
+	}
+}
